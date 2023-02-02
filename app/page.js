@@ -1,8 +1,8 @@
 import {
-  ArrowPathIcon,
   CloudArrowUpIcon,
-  ChevronRightIcon,
-  LockClosedIcon,
+  ShieldCheckIcon,
+  PuzzlePieceIcon,
+  BoltIcon,
 } from '@heroicons/react/20/solid'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -19,21 +19,21 @@ const features = [
     description:
       'We Leverage Zero-Knowledge technology to enable users to control who they disclose compliance related verifications to via Polygon ID.',
     href: '#',
-    icon: CloudArrowUpIcon,
+    icon: BoltIcon,
   },
   {
     name: 'Web3 Composability',
     description:
       'Easy integrations with smart contract protocols and frontend apps (DeFi, DAOs, etc.) to automate, disintermediate, and scale compliance. Users only verify once for a claim and can take it anywhere that accepts our claim.',
     href: '#',
-    icon: LockClosedIcon,
+    icon: PuzzlePieceIcon,
   },
   {
     name: 'AI Fraud Prevention',
     description:
       'We utilize AI to verify authenticity of documents and detect fraudulent users—providing customers with integrity and security.',
     href: '#',
-    icon: ArrowPathIcon,
+    icon: ShieldCheckIcon,
   },
 ]
 
@@ -119,7 +119,7 @@ export default function Home() {
               <p className='mt-6 text-lg leading-8 text-gray-300'>
                 Lexproof provides web3 organizations, dApps, investors, and
                 financial institutions with ZK powered compliance solutions that
-                complement—instead of undermines—web3's value prop.
+                complement—instead of undermine—web3's value prop.
               </p>
               <div className='mt-10 flex items-center justify-center gap-x-6'>
                 <a
