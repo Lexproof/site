@@ -106,10 +106,10 @@ export default function Home() {
             <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
               <div className='relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-white-900/10 hover:ring-white-900/20'>
                 ZK powered compliance solutions{' '}
-                <a href='#' className='font-semibold text-indigo-600'>
+                {/* <a href='#' className='font-semibold text-indigo-600'>
                   <span className='absolute inset-0' aria-hidden='true' />
                   Read more <span aria-hidden='true'>&rarr;</span>
-                </a>
+                </a> */}
               </div>
             </div>
             <div className='text-center'>
