@@ -12,19 +12,21 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const people = [
   {
     name: 'Orlando Cosme',
-    role: 'Co-Founder & CEO',
+    role: 'Cofounder, CEO, & Attorney',
     imageUrl:
       '/orlando.jpeg',
-    bio: 'Previously: Startup/VC attorney at Gunderson, securities & government enforcement litigator at Sidley, expansion associate at WeWork, and interest rates trader at Citi.',
+    bio: 'Orlando was most recently a startup & venture capital attorney at Gunderson Dettmer—the law firm that has represented the most amount of venture capital raised since that metric’s been measured. Before Gunderson, Orlando was a litigator at Sidley Austin representing Fortune 50 companies and Big 4 accounting firms in securities litigation, government enforcement, and investigations. Prior to law school, he worked in expansion at WeWork and as an interest rates trader at Citigroup.',
+    bio2: 'Orlando earned his BA from the University of Pennsylvania and his JD from Northwestern Law.',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
   {
     name: 'Ryan Waits',
-    role: 'Co-Founder & CTO',
+    role: 'Cofounder, CTO, & Full-Stack Developer',
     imageUrl:
       '/ryan.jpeg',
-    bio: 'Previously: Head of Engineering at RabbitHole (web3 learn- to-earn), co-founder & lead developer at Sweep, and software developer at Sonic Healthcare.',
+    bio: 'Ryan was most recently the head of engineering at Rabbithole, the company that pioneered the "learn-to-earn" web3 vertical. Before Rabbithole, he cofounded and was the lead developer of Sweep, where he created a chatbot that made sports predictions in-game and rewarded users with prizes for Budweiser and Bud Light, attracting over half a million users. Prior to Sweep, Ryan built enterprise software tools for a healthcare company.',
+    bio2: 'Ryan earned his BS from Arizona State University.',
     twitterUrl: '#',
     linkedinUrl: '#',
   },
@@ -150,7 +152,7 @@ export default function Home() {
         <div className='relative px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl py-24 sm:py-48'>
             <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
-              <div className='bg-slate-500/10 relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-slate-500/90 hover:ring-slate-500'>
+              <div className='bg-slate-900/5 relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-slate-600/90'>
                 Crypto native compliance solutions{' '}
                 {/* <a href='#' className='font-semibold text-indigo-600'>
                   <span className='absolute inset-0' aria-hidden='true' />
@@ -167,10 +169,11 @@ export default function Home() {
               </p>
               <div className='mt-10 flex items-center justify-center gap-x-6'>
                 <a
-                  href='#'
-                  className='rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 opacity-50'
+                  href='https://form.typeform.com/to/x2zVaL2V'
+                  target='_blank'
+                  className='rounded-md bg-white px-3.5 py-1.5 text-base font-semibold leading-7 text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                 >
-                  Coming soon
+                  Get in touch
                 </a>
                 {/* <a
                   href='#'
@@ -230,7 +233,7 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            We do the <span className='bg-gradient-to-r from-white to-orange-500 text-transparent bg-clip-text'>compliance</span> heavy lifting so you can focus on your business.
+            We do the <span className='bg-gradient-to-r from-white to-orange-500 text-transparent bg-clip-text'>compliance heavy lifting</span> so you can focus on your business.
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -266,17 +269,55 @@ export default function Home() {
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
         >
           {people.map((person) => (
-            <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
+            <li key={person.name} className="flex flex-col gap-6">
               <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={person.imageUrl} alt="" />
               <div className="flex-auto">
                 <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
                 <p className="text-base leading-7 text-gray-600">{person.role}</p>
                 <p className="mt-6 text-base leading-7 text-gray-600">{person.bio}</p>
+                <p className="mt-6 text-base leading-7 text-gray-600">{person.bio2}</p>
               </div>
             </li>
           ))}
         </ul>
       </div>
+    </div>
+    <div className="relative isolate overflow-hidden bg-slate-900">
+      <div className="py-24 px-6 sm:px-6 sm:py-32 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-white">
+            Stay compliant. Unleash web3’s full potential.
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Get in touch to learn how Lexproof can help you meet compliance requirements without undermining your value proposition. 
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href='https://form.typeform.com/to/x2zVaL2V'
+              target='_blank'
+              className='rounded-md bg-white px-3.5 py-1.5 text-base font-semibold leading-7 text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+            >
+              Reach out
+            </a>
+            {/* <a href="#" className="text-base font-semibold leading-7 text-white">
+              Learn more <span aria-hidden="true">→</span>
+            </a> */}
+          </div>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1024 1024"
+        className="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+        aria-hidden="true"
+      >
+        <circle cx={512} cy={512} r={512} fill="url(#8d958450-c69f-4251-94bc-4e091a323369)" fillOpacity="0.7" />
+        <defs>
+          <radialGradient id="8d958450-c69f-4251-94bc-4e091a323369">
+            <stop stopColor="#7775D6" />
+          </radialGradient>
+        </defs>
+      </svg>
     </div>
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
