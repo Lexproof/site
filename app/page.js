@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {
   CloudArrowUpIcon,
   ShieldCheckIcon,
@@ -5,12 +6,32 @@ import {
   BoltIcon,
 } from '@heroicons/react/20/solid'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+const people = [
+  {
+    name: 'Orlando Cosme',
+    role: 'Co-Founder & CEO',
+    imageUrl:
+      '/orlando.jpeg',
+    bio: 'Previously: Startup/VC attorney at Gunderson, securities & government enforcement litigator at Sidley, expansion associate at WeWork, and interest rates trader at Citi.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'Ryan Waits',
+    role: 'Co-Founder & CTO',
+    imageUrl:
+      '/ryan.jpeg',
+    bio: 'Previously: Head of Engineering at RabbitHole (web3 learn- to-earn), co-founder & lead developer at Sweep, and software developer at Sonic Healthcare.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+]
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Product', href: '#', icon: BoltIcon, },
+  { name: 'Features', href: '#', icon: BoltIcon, },
+  { name: 'Marketplace', href: '#', icon: BoltIcon, },
+  { name: 'Company', href: '#', icon: BoltIcon, },
 ]
 
 const features = [
@@ -37,6 +58,30 @@ const features = [
   },
 ]
 
+const subFeatures = [
+  {
+    name: 'Various Regulations',
+    description:
+      'Use Certify to meet requirements for KYC/AML securities, investment company, and other laws.',
+    href: '#',
+    icon: BoltIcon,
+  },
+  {
+    name: 'Attorney Reviewed',
+    description:
+      'Our U.S. licensed attorneys review all documents and claims to ensure compliance with applicable laws.',
+    href: '#',
+    icon: PuzzlePieceIcon,
+  },
+  {
+    name: 'Polygon ID Infrastructure',
+    description:
+      'Certify uses Polygon ID to issue claims and leverages the Polygon zero-knowledge identity ecosystem. Simply accept Certify claims in your app by easily integrating Polygon ID.',
+    href: '#',
+    icon: ShieldCheckIcon,
+  },
+]
+
 export default function Home() {
   return (
     <div className='isolate bg-gray-900'>
@@ -44,12 +89,10 @@ export default function Home() {
       <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+              <span className="sr-only">Lexproof</span>
+              <Image src="/lexproof-logo.png" alt="" width={175} height={175} />
             </a>
-            <p className='px-3 text-xl font-bold tracking-tight text-gray-300 sm:text-2xl'>Lexproof</p>
           </div>
-          
           </nav>
           </div>
     <svg
@@ -102,9 +145,9 @@ export default function Home() {
       </svg>
       <main>
         <div className='relative px-6 lg:px-8'>
-          <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
+          <div className='mx-auto max-w-2xl py-24 sm:py-48'>
             <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
-              <div className='relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-white-900/10 hover:ring-white-900/20'>
+              <div className='bg-indigo-900 relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-neutral-800/10 hover:ring-white-900/20'>
                 Crypto native compliance solutions{' '}
                 {/* <a href='#' className='font-semibold text-indigo-600'>
                   <span className='absolute inset-0' aria-hidden='true' />
@@ -114,7 +157,7 @@ export default function Home() {
             </div>
             <div className='text-center'>
               <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
-                Compliance, the web3 way
+                Compliance verification <span className='bg-gradient-to-r from-white to-orange-500 text-transparent bg-clip-text'>for web3</span>
               </h1>
               <p className='mt-6 text-lg leading-8 text-gray-300'>
                 Lexproof provides web3 organizations, dApps, investors, and
@@ -183,6 +226,76 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
+      <div className="bg-gray-900 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            We do the heavy lifting so you can focus on your business.
+          </h2>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {subFeatures.map((feature) => (
+              <div key={feature.name} className="flex flex-col">
+                <dt className="text-base font-semibold leading-7 text-white">
+                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                  </div>
+                  {feature.name}
+                </dt>
+                <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-100">
+                  <p className="flex-auto">{feature.description}</p>
+                  
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl sm:text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Lawyer + Web3 Veteran Dev: The perfect team to tackle web3 native compliance.
+          </p>
+        </div>
+        <ul
+          role="list"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
+        >
+          {people.map((person) => (
+            <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
+              <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={person.imageUrl} alt="" />
+              <div className="flex-auto">
+                <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
+                <p className="text-base leading-7 text-gray-600">{person.role}</p>
+                <p className="mt-6 text-base leading-7 text-gray-600">{person.bio}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    <footer className="bg-white">
+      <div className="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
+        {/* <div className="flex justify-center space-x-6 md:order-2">
+          {navigation.map((item) => (
+            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+              <span className="sr-only">{item.name}</span>
+              <item.icon className="h-6 w-6" aria-hidden="true" />
+            </a>
+          ))}
+        </div> */}
+        <div className="mt-8 md:order-1 md:mt-0">
+          <p className="text-center text-xs leading-5 text-gray-500">
+            &copy; 2023 StackerDAO Labs. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
     </div>
   )
 }
