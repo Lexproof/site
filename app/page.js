@@ -4,6 +4,9 @@ import {
   ShieldCheckIcon,
   PuzzlePieceIcon,
   BoltIcon,
+  ScaleIcon,
+  AcademicCapIcon,
+  IdentificationIcon
 } from '@heroicons/react/20/solid'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const people = [
@@ -45,7 +48,7 @@ const features = [
   {
     name: 'Web3 Composability',
     description:
-      'Easy integrations with smart contract protocols and frontend apps (DeFi, DAOs, etc.) to automate, disintermediate, and scale compliance. Users only verify once for a claim and can take it anywhere that accepts our claim.',
+      'Easy integrations with smart contract protocols and frontend apps (DeFi, DAOs, etc.) to automate, disintermediate, and scale compliance.',
     href: '#',
     icon: PuzzlePieceIcon,
   },
@@ -64,27 +67,27 @@ const subFeatures = [
     description:
       'Use Certify to meet requirements for KYC/AML securities, investment company, and other laws.',
     href: '#',
-    icon: BoltIcon,
+    icon: ScaleIcon,
   },
   {
     name: 'Attorney Reviewed',
     description:
       'Our U.S. licensed attorneys review all documents and claims to ensure compliance with applicable laws.',
     href: '#',
-    icon: PuzzlePieceIcon,
+    icon: AcademicCapIcon,
   },
   {
     name: 'Polygon ID Infrastructure',
     description:
       'Certify uses Polygon ID to issue claims and leverages the Polygon zero-knowledge identity ecosystem. Simply accept Certify claims in your app by easily integrating Polygon ID.',
     href: '#',
-    icon: ShieldCheckIcon,
+    icon: IdentificationIcon,
   },
 ]
 
 export default function Home() {
   return (
-    <div className='isolate bg-neutral-900'>
+    <div className='isolate bg-slate-900'>
       <div className="px-6 pt-6 lg:px-8">
       <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -147,7 +150,7 @@ export default function Home() {
         <div className='relative px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl py-24 sm:py-48'>
             <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
-              <div className='bg-indigo-900 relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-neutral-800/10 hover:ring-white-900/20'>
+              <div className='bg-slate-500/10 relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-slate-500/90 hover:ring-slate-500'>
                 Crypto native compliance solutions{' '}
                 {/* <a href='#' className='font-semibold text-indigo-600'>
                   <span className='absolute inset-0' aria-hidden='true' />
@@ -160,9 +163,7 @@ export default function Home() {
                 Compliance verification <span className='bg-gradient-to-r from-white to-orange-500 text-transparent bg-clip-text'>for web3</span>
               </h1>
               <p className='mt-6 text-lg leading-8 text-gray-300'>
-                Lexproof provides web3 organizations, dApps, investors, and
-                financial institutions with ZK powered compliance solutions that
-                complement—instead of undermine—web3's value prop.
+              Lexproof helps businesses, dApps, financial institutions, investors, and more meet regulatory requirements in a web3 native way.
               </p>
               <div className='mt-10 flex items-center justify-center gap-x-6'>
                 <a
@@ -187,15 +188,13 @@ export default function Home() {
         <div className='mx-auto max-w-7xl px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl lg:text-center'>
             <h2 className='text-lg font-semibold leading-8 tracking-tight text-indigo-600'>
-              Certify
+              Certify for your organization
             </h2>
             <p className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-              We take care of compliance so you don't have to.
+              Compliance solutions that complement web3’s value prop. 
             </p>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
-              Our attorneys review your users' information and make
-              verifications so that you can comply with KYC/AML, securities,
-              investment company, and other laws.
+              Certify verifies user compliance status while securing their privacy and self-sovereignty. Verify once and take your verification claim anywhere. Accept our claims, stay compliant, and unlock the full potential of web3.
             </p>
           </div>
           <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
@@ -231,7 +230,7 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            We do the heavy lifting so you can focus on your business.
+            We do the <span className='bg-gradient-to-r from-white to-orange-500 text-transparent bg-clip-text'>compliance</span> heavy lifting so you can focus on your business.
           </h2>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
